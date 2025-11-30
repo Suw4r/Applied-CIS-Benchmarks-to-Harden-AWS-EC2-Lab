@@ -1,0 +1,1 @@
+# Applied-CIS-Benchmarks-to-Harden-AWS-EC2-Lab
