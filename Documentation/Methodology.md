@@ -1,9 +1,9 @@
 # Methodology
 
 ## Notes
--Only CAT I benchmarks will be applied since these are of the highest severity
--The system contains a single root account.
--Ubuntu Pro benchmarks were excluded due to budget limitations
+- Only CAT I benchmarks will be applied since these are of the highest severity
+- The system contains a single root account.
+- Ubuntu Pro benchmarks were excluded due to budget limitations
 
 ## Environment Setup
 1. Created an AWS account and launched an EC2 instance
