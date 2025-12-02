@@ -6,14 +6,14 @@
 - Ubuntu Pro benchmarks were excluded due to budget limitations
 
 ## Environment Setup
-1. Created an AWS account and launched an EC2 instance
+1. Created an AWS account and launch an EC2 instance
 2. Select [Ubuntu](Screenshots/Choosing_ubuntu.png) for Application and OS Images
-3. Create a EC2 keypair for access via SSH
-4. Go to the loaction of the EC2 key:
+3. Create a [EC2](Screenshots/Create_ec2-keypair_key.png) keypair for access via SSH
+4. Go to the saved location of the EC2 key:
 ```bash
 cd C:\Users\Suwar\Desktop\Websites
 ```
-5. Connected to the EC2 instance via SSH:
+5. Connected to the EC2 instance via [SSH](Screenshots/ssh_into_ec2:
 ```bash
 ssh -i "ec2-keypair.pem" ubuntu@ec2-56-228-25-208.eu-north-1.compute.amazonaws.com
 ```
@@ -52,7 +52,7 @@ sudo apt-get remove telnetd
 Package 'telnetd' is not installed, so not removed
 ```
 - **Result:** Telnet package was not installed. Compliant.
-
+- [Screenshot](Screenshots/Telnet.png)
 
 ### 1.5 UBTU-24-100040
 **GROUP ID:** V-270648
@@ -66,6 +66,7 @@ dpkg -l | grep rsh-server
 ```
 - Output: nothing
 - **Result:** RSH service package was not installed
+- [Screenshot](Screenshots/RSH_service.png)
 
 
 ### 1.22 UBTU-24-100800
@@ -85,6 +86,7 @@ ii  openssh-server                     1:9.6p1-3ubuntu13.14                    a
 ii  openssh-sftp-server                1:9.6p1-3ubuntu13.14                    amd64        secure shell (SSH) sftp server module, for SFTP access from remote machines
 ```
 - **Result:** Open ssh is installed. Compliant.
+- [Screenshot](Screenshots/ssh_package_check.png)
 
 
 ### 1.23 UBTU-24-100810
@@ -121,6 +123,7 @@ sudo systemctl is-enabled ssh
 enabled
 ```
 - **Result:** SSH is enabled. Compliant.
+- [Screenshot](Screenshots/Systemctl_is_active.png)
 
 
 ### 1.32 UBTU-24-102000
@@ -135,15 +138,14 @@ sudo grep -i password /boot/grub/grub.cfg
 ```
 - Output: nothing
 - Remediation: 
-1. Generate an encrypted (grub) password for root by using the following command:
+1. [Generate](Screenshots/Grub_password.png) an encrypted (grub) password for root by using the following command:
 ```
 grub-mkpasswd-pbkdf2
 ```
 2. Enter password twice
 3. Copy the hashed password that you got
-4. Modify the "/etc/grub.d/40_custom" file by using the
-following command to add a boot password:                                 #  after using the sudo sed command i got sed: no input files, because I didn't copy /etc/grub.d/40_custom which is a stupid little mistake. For entire explenation check notepad #
-```bash
+4. Modify
+```
 sudo sed -i '$i set superusers=\"root\"\npassword_pbkdf2 root grub.pbkdf2.sha512.10000.6C2822CF2EA6F7AF9D365689A56F71E68866ED99E2BBDE183B3F28DF40FF70CA996175181B4CDAF08776F07811F028537DCC112C4CB44533391974F7FD8DEA86.FCB4AE31821F624CC5294CD3F3E9B8C670A9A247B30BBB76EF764A7DC7F6F96457AAB6C1D88A5AD83B55954B85D92703C8831C2F1523EAC914A3694804CDC621' /etc/grub.d/40_custom
 ```
 5. Update the grub: 
@@ -174,7 +176,7 @@ sudo grep -i password /boot/grub/grub.cfg
 - Output: grub.pbkdf2.sha512.10000.6C2822CF2EA6F7AF9D365689A56F71E68866ED99E2BBDE183B3F28DF40FF70CA996175181B4CDAF08776F07811F028537DCC112C4CB44533391974F7FD8DEA86.FCB4AE31821F624CC5294CD3F3E9B8C670A9A247B30BBB76EF764A7DC7F6F96457AAB6C1D88A5AD83B55954B85D92703C8831C2F1523EAC914A3694804CDC621
 
 - **Result:** Now we have verified that the operating system requires a password for authentication upon booting into single-user and maintenance modes. Compliant.
-
+- [Screenshot](Screenshots/Modify_Grub.png)
 
 
 
@@ -198,7 +200,7 @@ sudo grep -ir x11forwarding /etc/ssh/sshd_config* | grep -v "^#"
 ```bash
 sudo nano /etc/ssh/sshd_config
 ```
-1. Change the "X11Forwarding yes" to "X11Forwarding no"                               #I got permission denied when saving the file use sudo next time
+1. [Change](Screenshots/X11_fowarding_yes.png) the "X11Forwarding yes" to "X11Forwarding no"                               #I got permission denied when saving the file use sudo next time
 2. Save the file
 3. For the effects to take place restart the SSH service:
 ```bash
@@ -214,7 +216,8 @@ output:/etc/ssh/sshd_config:X11Forwarding no
 /etc/ssh/sshd_config:#  X11Forwarding no
 ```
 - **Result:**  We turned off X11 forwarding. Compliant.
-
+- Screenshot [before](Screenshots/x11_forwarding_check.png)
+- Screenshot [after](Screenshots/X11_fowarding_set_to_no.png)
 
 
 
