@@ -73,7 +73,7 @@ dpkg -l | grep rsh-server
 
 **RULE ID:** SV-270665r1067133
 
-- Rationale: Confidentiality and Integrity can both be compromised if information is intercepted and either read or altered.
+- Rationale: Confidentiality and Integrity can both be compromised if information is intercepted and either read or altered via SSH.
 - Validate:
 ```bash
 sudo dpkg -l | grep openssh
