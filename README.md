@@ -20,9 +20,3 @@ This project demonstrates the application of CIS Ubuntu Linux 24.04 LTS STIG Ben
 1. Read CIS CAT I benchmark PDF.
 2. Apply applicable rules on the EC2 instance where possible.
 3. Documented compliance with screenshots and notes.
-
-## Findings
-- Compliant: 9 rules
-- Manual: 2 rules
-- Not Applicable: 3 rules
-- Not Implemented: 1 rule (Ubuntu Pro subscription required)
