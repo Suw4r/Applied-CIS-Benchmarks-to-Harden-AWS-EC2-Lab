@@ -7,7 +7,7 @@
 
 ## Environment Setup
 1. Created an AWS account and launched an EC2 instance
-2. Selected [Ubuntu](Screenshots/Sustemctl_is-active.png) for Application and OS Images
+2. Selected [Ubuntu](Screenshots/Systemctl_is-active.png) for Application and OS Images
 3. Created an EC2 keypair for access via SSH
 4. Go to the loaction of the EC2 key:
 ```bash
