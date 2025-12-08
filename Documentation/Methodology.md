@@ -270,6 +270,7 @@ systemctl status ctrl-alt-del.target
      Active: inactive (dead)
 ```
 - **Result:** The Ctrl-Alt-Del sequence has been disabled to help prevent accidental system reboots. Compliant.
+- [Screenshot](Screenshots/disabling_ctr_alt_del_p2.png)
 
 
 
@@ -287,6 +288,7 @@ sudo awk -F: '!$2 {print $1}' /etc/shadow
 ```
 - Output: nothing
 - **Result:** All accounts on the system have a password, if that was not the case we would have either made a password for that account or locked it.
+- [Screenshot](Screenshots/blank_pass.png)
 
 
 
@@ -310,9 +312,9 @@ grep nullok /etc/pam.d/common-auth /etc/pam.d/common-password
 ```
 sudo nano /etc/pam.d/common-auth
 ```
-- Remove nullok
+- [Remove](Screenshots/nano_nullok) nullok
 - **Result:** the PAM is not configured with the nullok option, so it is not possible anymore to log on to the account without authenticating. Compliant.
-
+- [Screenshot](Screenshots/output_nullok)
 
 
 
@@ -333,6 +335,7 @@ PermitEmptyPasswords no
 PermitUserEnvironment no
 ```
 - **Result:** Automatic login via SSH is disabled
+- [Screenshot](Screenshots/auto_ssh)
 
 
 
