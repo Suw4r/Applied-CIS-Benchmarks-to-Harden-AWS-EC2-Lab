@@ -1,6 +1,6 @@
 # Summary
 
-The Purpose of this project was to demonstrate how to implement NIST/CIS Benchmarks to harden an AWS EC2 lab. The newest Ubuntu specific CIS benchmark steps were followed with focus was on applying the highest severity (CAT I) controls since those are the most 
+The Purpose of this project was to demonstrate how to implement NIST/CIS Benchmarks to harden an AWS EC2 lab. The newest Ubuntu CIS benchmark steps were followed with focus lying on applying the highest severity (CAT I) controls since those are the most 
 critical, reducing security risks and following industry standard guidelines for system hardening.
 
 The project began with the set up of an AWS EC2 instance with an Ubuntu server. SSH access was used to connect to this instance. Each CAT I control was handled following a standard of verification, remediation and result.
