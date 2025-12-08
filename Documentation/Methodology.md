@@ -200,7 +200,7 @@ sudo grep -ir x11forwarding /etc/ssh/sshd_config* | grep -v "^#"
 ```bash
 sudo nano /etc/ssh/sshd_config
 ```
-1. [Change](Screenshots/X11_fowarding_yes.png) the "X11Forwarding yes" to "X11Forwarding no"                               #I got permission denied when saving the file use sudo next time
+1. [Change](Screenshots/X11_fowarding_yes.png) the "X11Forwarding yes" to "X11Forwarding no" 
 2. Save the file
 3. For the effects to take place restart the SSH service:
 ```bash
