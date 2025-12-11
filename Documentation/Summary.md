@@ -1,21 +1,22 @@
 # Summary
 
-The Purpose of this project was to demonstrate how to implement NIST/CIS Benchmarks to harden an AWS EC2 lab. The newest Ubuntu CIS benchmark steps were followed with focus lying on applying the highest severity (CAT I) controls since those are the most 
-critical, reducing security risks and following industry standard guidelines for system hardening.
+This project demonstrated how to implement NIST/CIS Benchmarks to harden an AWS EC2 lab. The newest Ubuntu CIS benchmark steps were followed with focus being on on applying only the highest severity controls because 
+those are the most critical, which then help reduces the security risks while following industry standard guidelines for system hardening.
 
-The project began with the set up of an AWS EC2 instance with an Ubuntu server. SSH access was used to connect to this instance. Each CAT I control was handled following a standard of verification, remediation and result.
+The project started with setting up an AWS EC2 instance with Ubuntu server as the OS. SSH access was then used to connect to this instance. Every CAT I control was handled following this simple guide of verification, remediation and result.
+
 Actions that were taken include:
 - Enabled SSH
 - Ensured SSH was configured correctly
-- Initialized OS requirement for a password for authentication upon booting into single-user and maintenance modes.
-- The Ctrl-Alt-Del sequence has been disabled to help prevent accidental system reboots
-- Disabled X11 display server since it can be exposed to attacks such as keystroke monitoring.
+- Assured that the OS requiremed a password for authentication when booting into single-user and maintenance modes.
+- The Ctrl-Alt-Del sequence was disabled which helps prevent accidental system reboots
+- X11 display server was disabled since it can be exposed to attacks such as keystroke monitoring.
 - Ensured that the PAM is not configured with the nullok option, which would allow accounts to log in automatically without a password.
 
-Some Controls were marked Not Applicable due to particular elements like absence of GUI or features requiring Ubuntu Pro subscriptions. These exclusions were documented as well to provide clarity in my methodology.
+Some Controls were marked Not Applicable due to certain elements like the lack of a GUI or features that require Ubuntu Pro subscriptions. These exclusions were documented as well to provide clarity in my methodology.
 
-Overall, the instance achieved compliance for only the applied CAT I controls. This project presents understanding of addressing critical security measures and an understanding of cloud principle. 
-The methodology is practical for a learning environment and provides a secure, documented lab instance.
+Overall, the instance met the requirements for compliance for the applied controls. This shows the importance of giving attention to critical security measures and an understand cloud ideas. 
+The methodology used is practical for an environment to learn in and provides a secure, documented lab instance.
 
 ## Total findings
 - Total Rule Evaluated: 14
