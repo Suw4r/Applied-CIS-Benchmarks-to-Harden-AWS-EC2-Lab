@@ -8,7 +8,7 @@ The project started with setting up an AWS EC2 instance with Ubuntu server as th
 Actions that were taken include:
 - Enabled SSH
 - Ensured SSH was configured correctly
-- Assured that the OS requiremed a password for authentication when booting into single-user and maintenance modes.
+- The requirements for the OS to have a password for authentication when booting into single-user and maintenance modes.
 - The Ctrl-Alt-Del sequence was disabled which helps prevent accidental system reboots
 - X11 display server was disabled since it can be exposed to attacks such as keystroke monitoring.
 - Ensured that the PAM is not configured with the nullok option, which would allow accounts to log in automatically without a password.
