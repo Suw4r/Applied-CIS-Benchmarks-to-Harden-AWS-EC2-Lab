@@ -1,7 +1,7 @@
 # CIS Ubuntu 24.04 CAT I Hardening on AWS EC2 lab
 
 ## Overview
-This project demonstrates the application of CIS Ubuntu Linux 24.04 LTS STIG Benchmark benchmarks on an AWS EC2 instance. The aim of this project is to improve system security by applying hardening controls. This includes both automated and manual controls. For this project only CAT I benchmarks will be applied, which are of the highest severity. 
+This project will demonstrates the application of CIS Ubuntu Linux 24.04 LTS STIG Benchmark on an AWS EC2 instance. The aim of this project will be to help improve system security by applying different hardening controls, including both automated and manual controls. For this project only CAT I benchmarks will be applied, which are of the highest severity. 
 
 ## Environment
 - AWS EC2
